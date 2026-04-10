@@ -1,5 +1,5 @@
 import pytest
-from population_analyzer import calculate_population_change
+from population_analisys import calculate_population_change
 
 @pytest.fixture
 def sample_data():
