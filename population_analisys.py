@@ -32,3 +32,15 @@ def calculate_population_change(data):
             changes[country].append({year_range: change})
             
     return changes
+
+
+if __name__ == "__main__":
+    test_file = 'data.txt'
+    try:
+        raw_data = read_population_data(test_file)
+        result = calculate_population_change(raw_data)
+        print("Результати аналізу змін населення:")
+        for country, stats in result.items():
+            print(f"{country}: {stats}")
+    except FileNotFoundError:
+        print("Створіть файл data.txt для тестування.")
